@@ -85,11 +85,15 @@ OzonStyle/
     LaunchScreen.storyboard
 ```
 
-> Layout strategy: each screen is a `UICollectionView` driven by
+> Layout strategy (intended): each screen as a `UICollectionView` driven by
 > `UICollectionViewCompositionalLayout` + `UICollectionViewDiffableDataSource`.
-> Sections map to the spec (header / carousel / quick-actions / grid). Grids are
-> compositional groups (2-col / 3-col); the carousel is an orthogonally-scrolling
-> paging section; section titles are boundary supplementary headers.
+> Sections map to the spec (header / carousel / quick-actions / grid).
+>
+> **Implementation note:** the shipped v1 instead composes each screen with
+> `UIScrollView` + `UIStackView` and reusable `UIView` components (the Home banner
+> carousel is the one paging `UICollectionView`). Simpler/robust for static content;
+> the MVVM-C layering is identical. See `validation-report.md` deviations. Also, the
+> lifecycle uses `AppDelegate` (window-based) rather than `SceneDelegate`.
 
 ## 3. Data model (from spec §2)
 
