@@ -58,7 +58,11 @@ extension BannerCarouselView: UICollectionViewDataSource, UICollectionViewDelega
         banners.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.reuseID, for: indexPath) as! BannerCell
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: BannerCell.reuseID, for: indexPath) as? BannerCell else {
+            assertionFailure("BannerCell is not registered for \(BannerCell.reuseID)")
+            return UICollectionViewCell()
+        }
         cell.configure(named: banners[indexPath.item].imageName)
         return cell
     }
