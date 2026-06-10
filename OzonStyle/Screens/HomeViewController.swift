@@ -7,6 +7,7 @@ final class HomeViewController: ScrollScreenViewController {
     private let viewModel: HomeViewModel
     private let onSelectProduct: (Product) -> Void
     private var carousel: BannerCarouselView?
+    private var countdownLabel: UILabel?
     private var cancellables = Set<AnyCancellable>()
 
     init(viewModel: HomeViewModel, onSelectProduct: @escaping (Product) -> Void) {
@@ -36,15 +37,22 @@ final class HomeViewController: ScrollScreenViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] index in self?.carousel?.setIndex(index) }
             .store(in: &cancellables)
+
+        viewModel.$saleCountdownText
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] text in self?.countdownLabel?.text = "\(text) до старта" }
+            .store(in: &cancellables)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.startCarousel()
+        viewModel.startSaleCountdown()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         viewModel.stopCarousel()
+        viewModel.stopSaleCountdown()
     }
 
     // MARK: Gradient header (logo + city/login + search + hero, all inside gradient)
@@ -85,8 +93,11 @@ final class HomeViewController: ScrollScreenViewController {
 
     private func makeHeroRow() -> UIView {
         let headline = UI.label("ПРАЗДНИК\nПРИЛЕТИТ", .systemFont(ofSize: 26, weight: .heavy), .white, lines: 2)
+        let countdownLabel = UI.label("\(viewModel.saleCountdownText) до старта",
+                                      .systemFont(ofSize: 14, weight: .semibold), .white)
+        self.countdownLabel = countdownLabel
         let countdown = DarkPillView(UI.hStack([
-            UI.label("19:45:13 до старта", .systemFont(ofSize: 14, weight: .semibold), .white),
+            countdownLabel,
             UI.symbol("chevron.right", .white, size: 12, weight: .semibold),
         ], spacing: 8), height: 36, hPadding: 14)
         let countdownBox = UI.hStack([countdown, UIView()], spacing: 0)   // hug left

@@ -25,7 +25,7 @@ final class BannerCarouselView: UIView {
     init(banners: [Banner]) {
         self.banners = banners
         super.init(frame: .zero)
-        layer.cornerRadius = 16
+        layer.cornerRadius = Layout.cornerBanner
         layer.masksToBounds = true
 
         addSubview(collection)
@@ -38,7 +38,7 @@ final class BannerCarouselView: UIView {
         addSubview(pageControl)
 
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 150),
+            heightAnchor.constraint(equalToConstant: Layout.bannerHeight),
             pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
             pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
         ])
@@ -58,7 +58,11 @@ extension BannerCarouselView: UICollectionViewDataSource, UICollectionViewDelega
         banners.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.reuseID, for: indexPath) as! BannerCell
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: BannerCell.reuseID, for: indexPath) as? BannerCell else {
+            assertionFailure("BannerCell is not registered for \(BannerCell.reuseID)")
+            return UICollectionViewCell()
+        }
         cell.configure(named: banners[indexPath.item].imageName)
         return cell
     }
