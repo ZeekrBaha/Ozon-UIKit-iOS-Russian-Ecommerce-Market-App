@@ -25,7 +25,7 @@ final class BannerCarouselView: UIView {
     init(banners: [Banner]) {
         self.banners = banners
         super.init(frame: .zero)
-        layer.cornerRadius = 16
+        layer.cornerRadius = Layout.cornerBanner
         layer.masksToBounds = true
 
         addSubview(collection)
@@ -38,7 +38,7 @@ final class BannerCarouselView: UIView {
         addSubview(pageControl)
 
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 150),
+            heightAnchor.constraint(equalToConstant: Layout.bannerHeight),
             pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
             pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
         ])

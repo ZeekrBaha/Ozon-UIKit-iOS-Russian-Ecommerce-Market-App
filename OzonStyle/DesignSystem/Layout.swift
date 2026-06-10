@@ -12,6 +12,8 @@ enum Layout {
     static let cornerButtonLg: CGFloat = 16
     static let cornerButtonSm: CGFloat = 12
     static let cornerSheet: CGFloat    = 24   // rounded bottom of gradient/grouped sections
+    static let cornerBanner: CGFloat   = 16   // home promo carousel
+    static let bannerHeight: CGFloat   = 150  // home promo carousel
 
     // Grid math (compute, never eyeball). Compositional layout uses fractional
     // groups; these helpers are for any explicit sizing / verification.
