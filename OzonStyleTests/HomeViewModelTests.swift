@@ -58,4 +58,35 @@ final class HomeViewModelTests: XCTestCase {
         vm.syncBannerIndex(-1)
         XCTAssertEqual(vm.bannerIndex, 0)
     }
+
+    // MARK: Sale countdown
+
+    func testCountdownTextFormatsHoursMinutesSeconds() {
+        XCTAssertEqual(HomeViewModel.countdownText(seconds: 71113), "19:45:13")
+        XCTAssertEqual(HomeViewModel.countdownText(seconds: 0), "00:00:00")
+        XCTAssertEqual(HomeViewModel.countdownText(seconds: 61), "00:01:01")
+    }
+
+    func testCountdownTextClampsNegativeToZero() {
+        XCTAssertEqual(HomeViewModel.countdownText(seconds: -5), "00:00:00")
+    }
+
+    func testInitialCountdownTextUsesSeededSeconds() {
+        let vm = HomeViewModel(repository: StubRepository(), saleSecondsRemaining: 3661)
+        XCTAssertEqual(vm.saleCountdownText, "01:01:01")
+    }
+
+    func testAdvanceCountdownDecrementsOneSecond() {
+        let vm = HomeViewModel(repository: StubRepository(), saleSecondsRemaining: 2)
+        vm.advanceCountdown()
+        XCTAssertEqual(vm.saleCountdownText, "00:00:01")
+    }
+
+    func testAdvanceCountdownStopsAtZero() {
+        let vm = HomeViewModel(repository: StubRepository(), saleSecondsRemaining: 1)
+        vm.advanceCountdown()
+        vm.advanceCountdown()
+        vm.advanceCountdown()
+        XCTAssertEqual(vm.saleCountdownText, "00:00:00")
+    }
 }
