@@ -8,7 +8,7 @@ card, per-tab navigation controllers, zero dependencies. The UIKit sibling of th
 tokens, and data; different framework.
 
 > **Status: implemented + verified.** Builds clean (0 warnings) and runs on the
-> iPhone 15 Pro Max simulator; **14/14 UI tests green**.
+> iPhone 16 simulator; **24/24 tests green** (10 unit + 14 UI), enforced in CI.
 
 ---
 
@@ -37,7 +37,7 @@ tokens, and data; different framework.
 | Data | `ProductRepository` protocol → `SampleDataRepository` (DI seam) |
 | Images | Asset-catalog imagesets + `ProductImageView` placeholder fallback |
 | Project | XcodeGen (`project.yml`) |
-| Tests | XCUITest — 14 tests (8 functional + 6 layout), all green |
+| Tests | XCTest — 10 unit; XCUITest — 14 (8 functional + 6 layout); all green |
 | Dependencies | None |
 
 ---
@@ -209,15 +209,24 @@ The gate is visual fidelity + an **MVVM-C layering review** + **8 binary red-lin
 
 ## Tests
 
-UI tests (`XCUITest`) cover the full app surface. **14/14 green** on the
-iPhone 15 Pro Max simulator — 8 functional + 6 layout.
+**24/24 green** on an iPhone 16 (iOS 18.0) simulator — 10 unit + 14 UI, run
+end-to-end via `xcodegen generate && xcodebuild test` (also enforced in CI,
+`.github/workflows/ci.yml`, on every push/PR).
 
-**Functional** (`OzonStyleUITests.swift`) — structure, content, navigation:
+**Unit** (`OzonStyleTests/HomeViewModelTests.swift`) — banner rotation, countdown
+formatting, and repository sync against a `StubRepository`: `testInitReadsBannersFromRepository`,
+`testAdvanceBannerWrapsToZeroAfterLastBanner`, `testAdvanceBannerWithNoBannersKeepsIndexZero`,
+`testSyncBannerIndexAcceptsValidIndex`, `testSyncBannerIndexIgnoresOutOfBoundsIndex`,
+`testInitialCountdownTextUsesSeededSeconds`, `testAdvanceCountdownDecrementsOneSecond`,
+`testAdvanceCountdownStopsAtZero`, `testCountdownTextFormatsHoursMinutesSeconds`,
+`testCountdownTextClampsNegativeToZero`.
+
+**UI functional** (`OzonStyleUITests.swift`) — structure, content, navigation:
 `testTabBarHasFiveTabs`, `testHomeScreen`, `testCatalogScreen`, `testFavoritesScreen`,
 `testCartScreen`, `testProfileScreen`, `testProductDetailNavigationFromHome`,
 `testProductDetailNavigationFromCart`.
 
-**Layout** (`LayoutUITests.swift`) — the visual red-lines, automated as
+**UI layout** (`LayoutUITests.swift`) — the visual red-lines, automated as
 `XCUIElement.frame` assertions (no pixel-snapshot library → still zero-dependency):
 `testTabBarPinnedToBottom`, `testLogoPillBelowSafeAreaAndCentered`,
 `testFavoritesFeaturedIsCompactLeftAligned`, `testCartEmptyBandFullWidth`,
@@ -226,7 +235,7 @@ iPhone 15 Pro Max simulator — 8 functional + 6 layout.
 ```bash
 xcodegen generate
 xcodebuild test -scheme OzonStyle \
-  -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max'
+  -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0'
 ```
 
 ---

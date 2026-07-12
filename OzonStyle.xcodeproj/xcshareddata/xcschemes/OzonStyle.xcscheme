@@ -40,10 +40,11 @@
       </MacroExpansion>
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1000000000000000000000A4"
+               BlueprintIdentifier = "843925A550A05503472C004E"
                BuildableName = "OzonStyleTests.xctest"
                BlueprintName = "OzonStyleTests"
                ReferencedContainer = "container:OzonStyle.xcodeproj">

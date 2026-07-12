@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		047EF5808D982481A1773E4B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D53DCB4AF9ABD80CDEEB8 /* SearchBarView.swift */; };
 		08D4DFCB9AD4CBDEB2D09DF8 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE98872B33AA84D220EA48 /* UIHelpers.swift */; };
-		1000000000000000000000A2 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000000000000000000A1 /* HomeViewModelTests.swift */; };
 		09D4A8AD03F6FD5D2B66695C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5868BC0B9ABD0570A911BC0 /* HomeViewController.swift */; };
 		09DBE5CD52FB4E5906CA7F68 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956246BE1CD462C5FAE1B50A /* Typography.swift */; };
 		0B71C4B2F9D33B456EAC1DEF /* ScrollScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E428D8881B8F8E68D3A0072 /* ScrollScreenViewController.swift */; };
@@ -51,6 +50,7 @@
 		DE1A5E66FCC1083E4FA16A33 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8216F35E156D46174D9EA254 /* SectionHeaderView.swift */; };
 		E11F9FCBFF1BD2C9E1DF8F44 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A2170FFC447522ECB4F26 /* AppRoute.swift */; };
 		E5FD3F075A4D78E966C2672A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE96977207601AF00824D9F /* CartViewController.swift */; };
+		E848C698769C5D98B81FCA09 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EC7D96E025E0D0DFA6E65E /* HomeViewModelTests.swift */; };
 		E94928F53752084DB1E82FCB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEBAFE21E2089E2CFF2AA4D /* FavoritesViewController.swift */; };
 		F2E329149C49C6CB2106ADC8 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712EF099B4B60740A750DBA5 /* CartViewModel.swift */; };
 		F5B00846B336183898A2038E /* OzonStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F423BAA9F8A3A2790AF62B0 /* OzonStyleUITests.swift */; };
@@ -58,14 +58,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9160316C0D5D9D3A9CBEAFB0 /* PBXContainerItemProxy */ = {
+		47E04ECB90CAE35996599A0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 017DB26B058E30C4F10695CF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 237ECF4B3A6FB39D9A349673;
 			remoteInfo = OzonStyle;
 		};
-		1000000000000000000000AB /* PBXContainerItemProxy */ = {
+		9160316C0D5D9D3A9CBEAFB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 017DB26B058E30C4F10695CF /* Project object */;
 			proxyType = 1;
@@ -77,8 +77,6 @@
 /* Begin PBXFileReference section */
 		0B9911571C320D34713A6D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CEBAFE21E2089E2CFF2AA4D /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		1000000000000000000000A1 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
-		1000000000000000000000A5 /* OzonStyleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OzonStyleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		179AA56FC1AB4EC9F724E1E3 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		1A144679843435074C28C8EB /* AppLogoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoHeaderView.swift; sourceTree = "<group>"; };
 		1B80906EE33D4B6D3E4E4C9C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -107,12 +105,14 @@
 		960C6099B92E47E28C5D8DCD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9923C684FC2D7F6377CC1171 /* OzonStyleUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OzonStyleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		996D53DCB4AF9ABD80CDEEB8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		A0EC7D96E025E0D0DFA6E65E /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		A4AF4806658B5B0D628E4552 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		ACF4F1081C48770B4D7BB56D /* QuickActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionView.swift; sourceTree = "<group>"; };
 		AE4BAB90BAA55CA91FCB665E /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		B140C0D05F9D3926AD8FED25 /* GradientViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViews.swift; sourceTree = "<group>"; };
 		B1896A180E3EAA92556A82A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C75B1AA3D2A7EAA8EAE138 /* ProductGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGrid.swift; sourceTree = "<group>"; };
+		B3E251EB62C5E490C0890BB8 /* OzonStyleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OzonStyleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B662BDFCBA8E88C5880B9389 /* PriceBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceBlockView.swift; sourceTree = "<group>"; };
 		B6F5B363CA2AFEA25976AD83 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		BD4A2170FFC447522ECB4F26 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
@@ -158,14 +158,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1000000000000000000000A3 /* OzonStyleTests */ = {
-			isa = PBXGroup;
-			children = (
-				1000000000000000000000A1 /* HomeViewModelTests.swift */,
-			);
-			path = OzonStyleTests;
-			sourceTree = "<group>";
-		};
 		41AAE1DAFDFE8EDCE8C8F1B4 /* OzonStyleUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +181,14 @@
 				6F9219B06E723DCA221AAEC9 /* ViewModels */,
 			);
 			path = OzonStyle;
+			sourceTree = "<group>";
+		};
+		5218BB31D08CE374719FBFFE /* OzonStyleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0EC7D96E025E0D0DFA6E65E /* HomeViewModelTests.swift */,
+			);
+			path = OzonStyleTests;
 			sourceTree = "<group>";
 		};
 		6747E9BDC46D2AAA53B52057 /* App */ = {
@@ -226,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				1F28C6BFFCA9BF4EF6FBDCA8 /* OzonStyle.app */,
-				1000000000000000000000A5 /* OzonStyleTests.xctest */,
+				B3E251EB62C5E490C0890BB8 /* OzonStyleTests.xctest */,
 				9923C684FC2D7F6377CC1171 /* OzonStyleUITests.xctest */,
 			);
 			name = Products;
@@ -270,7 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				4B492F9011BF201849D0E9FA /* OzonStyle */,
-				1000000000000000000000A3 /* OzonStyleTests */,
+				5218BB31D08CE374719FBFFE /* OzonStyleTests */,
 				41AAE1DAFDFE8EDCE8C8F1B4 /* OzonStyleUITests */,
 				99056EFFBC4139B56F901399 /* Products */,
 			);
@@ -311,22 +311,22 @@
 			productReference = 1F28C6BFFCA9BF4EF6FBDCA8 /* OzonStyle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1000000000000000000000A4 /* OzonStyleTests */ = {
+		843925A550A05503472C004E /* OzonStyleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1000000000000000000000A7 /* Build configuration list for PBXNativeTarget "OzonStyleTests" */;
+			buildConfigurationList = 51A68B31487D5376294A8A73 /* Build configuration list for PBXNativeTarget "OzonStyleTests" */;
 			buildPhases = (
-				1000000000000000000000A6 /* Sources */,
+				A5CA1CA3704124B60E826995 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1000000000000000000000AA /* PBXTargetDependency */,
+				60AC82E46A42A0A91640C84F /* PBXTargetDependency */,
 			);
 			name = OzonStyleTests;
 			packageProductDependencies = (
 			);
 			productName = OzonStyleTests;
-			productReference = 1000000000000000000000A5 /* OzonStyleTests.xctest */;
+			productReference = B3E251EB62C5E490C0890BB8 /* OzonStyleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F428768DA7492686C2061628 /* OzonStyleUITests */ = {
@@ -359,9 +359,8 @@
 					237ECF4B3A6FB39D9A349673 = {
 						DevelopmentTeam = "";
 					};
-					1000000000000000000000A4 = {
+					843925A550A05503472C004E = {
 						DevelopmentTeam = "";
-						TestTargetID = 237ECF4B3A6FB39D9A349673;
 					};
 					F428768DA7492686C2061628 = {
 						DevelopmentTeam = "";
@@ -384,7 +383,7 @@
 			projectRoot = "";
 			targets = (
 				237ECF4B3A6FB39D9A349673 /* OzonStyle */,
-				1000000000000000000000A4 /* OzonStyleTests */,
+				843925A550A05503472C004E /* OzonStyleTests */,
 				F428768DA7492686C2061628 /* OzonStyleUITests */,
 			);
 		};
@@ -453,11 +452,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1000000000000000000000A6 /* Sources */ = {
+		A5CA1CA3704124B60E826995 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1000000000000000000000A2 /* HomeViewModelTests.swift in Sources */,
+				E848C698769C5D98B81FCA09 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +472,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1000000000000000000000AA /* PBXTargetDependency */ = {
+		60AC82E46A42A0A91640C84F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 237ECF4B3A6FB39D9A349673 /* OzonStyle */;
-			targetProxy = 1000000000000000000000AB /* PBXContainerItemProxy */;
+			targetProxy = 47E04ECB90CAE35996599A0E /* PBXContainerItemProxy */;
 		};
 		F261762FD7759C7770E8D3CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -486,38 +485,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1000000000000000000000A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baha.OzonStyleTests;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OzonStyle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OzonStyle";
-			};
-			name = Debug;
-		};
-		1000000000000000000000A9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baha.OzonStyleTests;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OzonStyle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OzonStyle";
-			};
-			name = Release;
-		};
 		22DA790B5182A48BC5E6911E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -695,6 +662,38 @@
 			};
 			name = Debug;
 		};
+		CF671F23EA8A726AC97E4713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baha.OzonStyleTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OzonStyle.app/OzonStyle";
+			};
+			name = Debug;
+		};
+		ED28332663B55EF99D630583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.baha.OzonStyleTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OzonStyle.app/OzonStyle";
+			};
+			name = Release;
+		};
 		F69D4BE806254AED48E1D476 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -714,15 +713,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1000000000000000000000A7 /* Build configuration list for PBXNativeTarget "OzonStyleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1000000000000000000000A8 /* Debug */,
-				1000000000000000000000A9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		2153A95D01E3D16CE169FD9C /* Build configuration list for PBXNativeTarget "OzonStyle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -737,6 +727,15 @@
 			buildConfigurations = (
 				BA04809B438DBFA9EFB9B7BC /* Debug */,
 				66EC6012646C2D8F449EC76C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		51A68B31487D5376294A8A73 /* Build configuration list for PBXNativeTarget "OzonStyleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF671F23EA8A726AC97E4713 /* Debug */,
+				ED28332663B55EF99D630583 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
